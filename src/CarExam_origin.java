@@ -6,8 +6,10 @@ public class CarExam_origin{
         cars.add( new Car("봉고차",12,1500,8) );
         cars.add( new Car("중간차",5,2200,0) );
         cars.add( new Car("비싼차",5,3500,1) );
-
-        printCar(cars, new CheckCarForBigAndNotExpensive());
+        CarExam_origin carExam1 = new CarExam_origin();
+        carExam1.printCar(cars, (Car car)->{
+            return car.capacity >=4 && car.price < 2500;
+        });
     }
 
     public static void printCar(List<Car> cars, CheckCar tester){
