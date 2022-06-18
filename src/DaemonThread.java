@@ -20,7 +20,7 @@ public class DaemonThread implements Runnable {
         // Runnable을 구현하는 DaemonThread를 실행하기 위하여 Thread 생성
         Thread th = new Thread(new DaemonThread());
         // 데몬쓰레드로 설정
-        th.setDaemon(true);
+        th.setDaemon(true); 
         // 쓰레드를 실행
         th.start();
 
